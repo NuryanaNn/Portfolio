@@ -138,6 +138,7 @@ section{
 	visibility: hidden;
 	border: 2px solid var(--span-color);
 	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 5);
+	padding-top: 100px;
 }
 
 .bgsidebar a{
