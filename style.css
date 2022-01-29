@@ -81,7 +81,7 @@ section{
 	align-items: flex-end;
 	z-index: 1000;
 	position: fixed;
-	right: 50px;
+	right: 10%;
 }
 
 .change.bar1{
@@ -710,7 +710,6 @@ h3{
 	align-items: flex-end;
 	z-index: 1000;
 	position: fixed;
-	right:150px;
 }
 
 	
