@@ -728,6 +728,38 @@ h3{
 		visibility: hidden;
 	}
 
+	.educational .headerText h3::after{
+		content: "";
+		border: 1px solid var(--span-color);
+		position: absolute;
+		width: 43%;
+		margin-top: 20px;
+		z-index: 1;
+		visibility: hidden;
+	}
+
+	.experience .headerText h3::after{
+		content: "";
+		border: 1px solid var(--span-color);
+		position: absolute;
+		width: 57%;
+		margin-top: 20px;
+		z-index: 1;
+		visibility: hidden;
+	}
+
+	
+.projects .headerText h3::after{
+	content: "";
+	border: 1px solid var(--span-color);
+	position: absolute;
+	width: 45%;
+	margin-top: 20px;
+	z-index: 1;
+	visibility: hidden;
+}
+	
+
 	.footer ul{
 	visibility: visible;
 }
