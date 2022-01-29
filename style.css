@@ -725,6 +725,7 @@ h3{
 		position: absolute;
 		z-index: -22;
 		border-radius: 5px;
+		visibility: hidden;
 	}
 
 	.footer ul{
