@@ -26,6 +26,7 @@ html{
 
 body{
 	background: var(--bg);
+	overflow-x:none;
 }
 
 .btn{
