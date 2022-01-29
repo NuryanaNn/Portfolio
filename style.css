@@ -284,19 +284,6 @@ section{
 	color: var(--slate);
 }
 
-.aboutMe.change .textMe h3::after{
-	margin-left: -220px;
-	transition: 0.5s;
-}
-
-.aboutMe .textMe h3::after{
-	content: "";
-	border: 1px solid var(--span-color);
-	position: absolute;
-	width: 260px;
-	margin-top: 20px;
-	z-index: 1;
-}
 
 .aboutMe .textMe span{
 	color: var(--span-color);
