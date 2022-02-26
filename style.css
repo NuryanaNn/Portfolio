@@ -29,6 +29,19 @@ body{
 	overflow-x:none;
 }
 
+.reveal{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s ease;
+}
+
+.reveal.active{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+
 .btn{
 	color: var(--span-color);
 	border: 1px solid var(--span-color);
@@ -66,15 +79,14 @@ section{
 	margin-top: 10px;
 }
 
-.navbar .logo{
-	color: var(--span-color);
+
+.navbar .logo img{
+	width: 50px;
+	margin-left: 10px;
 	border: 1px solid var(--span-color);
 	padding: 5px;
 	border-radius: 30px;
-	margin-left: 15px;
-	margin-top: -1px;
 }
-
 
 /* Burger */
 .burger{
@@ -82,12 +94,15 @@ section{
 	flex-direction: column;
 	align-items: flex-end;
 	z-index: 1000;
-	position: sticky;
+	position: fixed;
+	right:3%;
+	background: var(--lights-navy);
+	padding: 30px 20px;
+	border-radius: 50%;
 }
 
 .change.bar1{
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	transform: rotate(-45deg) translate(-14px, 6px);
+	transform: rotate(-45deg) translate(-4px, 7px);
 }
 
 .change.bar2{
@@ -95,8 +110,7 @@ section{
 }
 
 .change.bar3{
-	-webkit-transform: rotate(45deg) translate(-90px, 6px);
-	transform: rotate(45deg) translate(-8px, 1px);
+	transform: rotate(45deg) translate(-8px, -7px);
 	width: 50px;
 }
 
@@ -127,19 +141,16 @@ section{
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	background: var(--dark-card);
-	top: -100px;
-	right: -60px;
-	width: 500px;
-	height: 500px;
-	border-radius: 10% 0 10% 95%;
+	background: var(--bg);
+	top: 0;
+	right: -300px;
+	width: 170px;
+	height: 100%;
 	align-items: center;
 	justify-content: center;
 	z-index: 100;
-	visibility: hidden;
-	border: 2px solid var(--span-color);
-	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 5);
 	padding-top: 100px;
+	border-left: 1px solid var(--span-color);
 }
 
 .bgsidebar a{
@@ -154,7 +165,7 @@ section{
 }
 
 .bgsidebar.change{
-	visibility: visible;
+	right: 0;
 	transition: 0.4s;
 	animation: bg-sider .5s linear .5s backwards;
 }
@@ -163,7 +174,6 @@ section{
 @keyframes bg-sider {
 	0%{
 		opacity: 0;
-		bottom: 10px;
 	}
 }
 
@@ -227,8 +237,8 @@ section{
 	content: "";
 	border: 1px solid var(--span-color);
 	position: absolute;
-	height: 250px;
-	margin-top: -250px;
+	height: 320px;
+	margin-top: -320px;
 	z-index: 1;
 	margin-left: 8px;
 }
@@ -249,7 +259,7 @@ section{
 	color: var(--black-color);
 }
 
-.iconsWeb i:hover{
+.iconsWeb a i:hover{
 	font-size: 2rem;
 	color: var(--span-color);
 }
@@ -324,6 +334,27 @@ section{
 	color: var(--span-color);
 }
 
+.anotherSkill{
+	font-size: 1.5rem;
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--slate);
+	animation: slide 2s infinite;
+	transition: .5s;
+}
+
+.anotherSkill a{
+	text-decoration: none;
+	color: var(--span-color);
+}
+
+@keyframes slide {
+	100%{
+		transform: translateY(-10px);
+		transition: .5;
+	}
+}
+
 
 .aboutMe .imgBox{
 	width: 350px;
@@ -338,6 +369,12 @@ section{
 	border-radius: 5px;
 }
 
+.aboutMe .imgBox img:hover{
+	transform: translateX(20px) translateY(20px);
+	transition: 1s;
+}
+
+
 .aboutMe .imgBox .borderImg{
 	border: 1px solid var(--span-color);
 	height: 400px;
@@ -348,7 +385,6 @@ section{
 	z-index: -22;
 	border-radius: 5px;
 }
-
 
 /* Experience Sections */
 .educational .content{
@@ -731,6 +767,11 @@ h3{
 		z-index: -22;
 		border-radius: 5px;
 		visibility: hidden;
+	}
+
+	.aboutMe .imgBox img:hover{
+		transform: translateX(0px) translateY(0px);
+		transition: 1s;
 	}
 
 	.educational .headerText h3::after{
